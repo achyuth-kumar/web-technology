@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Add Student</title>
+  </head>
+
+  <body>
+    <a href="/get-students" style="margin-right: 40px">
+      <button>Display Infosys Selects</button>
+    </a>
+    <h1>Add Student Data</h1>
+    <form action="/add-student" method="POST">
+      <label for="usn">USN :- </label><br />
+      <input type="text" id="usn" placeholder="Enter" name="usn" /><br /><br />
+      <label for="name">Name :- </label><br />
+      <input
+        type="text"
+        id="name"
+        placeholder="Enter"
+        name="name"
+      /><br /><br />
+      <label for="company">Company :- </label><br />
+      <input
+        type="text"
+        id="company"
+        placeholder="Enter"
+        name="company"
+      /><br /><br />
+      <button type="submit">Submit</button>
+    </form>
+    <br />
+  </body>
+</html>

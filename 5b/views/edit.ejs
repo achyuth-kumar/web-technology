@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Add Student</title>
+  </head>
+
+  <body>
+    <br />
+    <br />
+    <% if(error) {%> There was an error updating details <br /><br /><br /><br />
+    <%}%>
+    <form action="/edit-students" method="POST">
+      <label for="name">Student name:</label>
+      <input type="text" id="name" name="name" /><br /><br />
+      <label for="grade">Grade:</label>
+      <input type="number" step="0.01" id="grade" name="grade" /><br /><br />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

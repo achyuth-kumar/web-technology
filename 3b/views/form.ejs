@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Voting System | Add Vote</title>
+  </head>
+
+  <body>
+    <a href="/get-votes" style="margin-right: 40px">
+      <button>View All Votes</button>
+    </a>
+    <h1>Add Vote</h1>
+    <form action="/add-vote" method="POST">
+      <label for="name">Name :- </label><br />
+      <input
+        type="text"
+        id="name"
+        placeholder="Enter"
+        name="name"
+      /><br /><br />
+      <label for="company">Party :- </label><br />
+      <input
+        type="text"
+        id="party"
+        placeholder="Enter"
+        name="party"
+      /><br /><br />
+      <button type="submit">Save Vote</button>
+    </form>
+    <br />
+  </body>
+</html>

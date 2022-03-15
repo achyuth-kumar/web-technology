@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Closures</title>
+    <meta charset="utf-8" />
+    <script>
+      const TaxCalculator = (amount) => (regime) => {
+        if (regime == "Old") {
+          const exciseDuty = amount * 0.12;
+          const vat = amount * 0.125;
+          const sgst = amount * 0.6;
+          const cgst = amount * 0.6;
+          return amount + exciseDuty + vat + sgst + cgst;
+        } else if (regime == "GST") {
+          const tax = amount * 0.18;
+          return amount + tax;
+        }
+      };
+      const myTaxInRegime = TaxCalculator(12500);
+      console.log("Old Regime: " + myTaxInRegime("Old"));
+      console.log("GST: " + myTaxInRegime("GST"));
+    </script>
+  </head>
+  <body></body>
+</html>

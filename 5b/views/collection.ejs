@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Add Student</title>
+  </head>
+
+  <body>
+    <br />
+    <br />
+    <% if(students) { %>
+      <table style="border: 1px solid black; width: 80%;text-align: center;">
+        <tr>
+          <th style="border: 1px solid black;">Name</th>
+          <th style="border: 1px solid black;">USN</th>
+          <th style="border: 1px solid black;">Dept</th>
+          <th style="border: 1px solid black;">Grade</th>
+        </tr>
+        <% for (let student of students) { %>
+          <tr>
+            <td style="border: 1px solid black;"><%= student.name %></td>
+            <td style="border: 1px solid black;"><%= student.usn %></td>
+            <td style="border: 1px solid black;"><%= student.dept %></td>
+            <td style="border: 1px solid black;"><%= student.grade %></td>    
+          </tr>
+        <% } %>
+      </table>
+    <% } else { %>
+      No students  
+    <% } %>
+  </body>
+</html>

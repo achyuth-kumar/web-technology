@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Saved Votes</title>
+  </head>
+
+  <body>
+    <a href="/" style="margin-right: 40px">
+      <button>New Vote</button>
+    </a>
+    <h1>Saved Votes</h1>
+    <br />
+    <% if(votes) { %>
+    <table style="border: 1px solid black; width: 80%; text-align: center">
+      <tr>
+        <th style="border: 1px solid black">Name</th>
+        <th style="border: 1px solid black">Party</th>
+      </tr>
+      <% for (let vote of votes) { %>
+      <tr>
+        <td style="border: 1px solid black"><%= vote.name %></td>
+        <td style="border: 1px solid black"><%= vote.party %></td>
+      </tr>
+      <% } %>
+    </table>
+    <% } else { %> No votes <% } %>
+  </body>
+</html>

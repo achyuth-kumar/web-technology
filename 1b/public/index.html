@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" action="/student">
+        <input type="text" name="USN" placeholder="USN"/><br>
+        <input type="text" name="Name" placeholder="Name"/><br>
+        <input type="text" name="Subject_code" placeholder="Subject_code"/><br>
+        <input type="text" name="CIE_marks" placeholder="CIE_marks"/><br>
+        <button type="submit">Submit</button>
+    </form>
+    <hr />
+<br />
+<h3>Students with less than 20 marks in CIE</h3>
+<br />
+<table id="students">
+  <tr>
+    <th>USN-------------------- |</th>
+    <th>Name----------------------------- |</th>
+    <th>Subject Code--------------------- |</th>
+    <th>CIE Marks---------- |</th>
+  </tr>
+</table>
+<script>
+    function setupTable(body){
+        body.map(row=>{
+            const tr = document.createElement("tr")
+            const USN = document.createElement("td")
+            USN.innerText = row.USN
+            const Name = document.createElement("td")
+            Name.innerText = row.Name
+            const Subject_code = document.createElement("td")
+            Subject_code.innerText = row.Subject_code
+            const CIE_marks = document.createElement("td")
+            CIE_marks.innerText = row.CIE_marks
+            tr.appendChild(USN)
+            tr.appendChild(Name)
+            tr.appendChild(Subject_code)
+            tr.appendChild(CIE_marks)
+            document.getElementById("students").appendChild(tr)
+        })
+    }
+    fetch("/students").then(response=>response.json()).then(setupTable)
+</script>
+</body>
+</html>

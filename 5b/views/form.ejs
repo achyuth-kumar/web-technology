@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Add Student</title>
+  </head>
+
+  <body>
+    <br />
+    <br />
+    <form action="/add-student" method="POST">
+      <label for="name">Student name:</label>
+      <input type="text" id="name" name="name" /><br /><br />
+      <label for="usn">USN:</label>
+      <input type="text" id="usn" name="usn" /><br /><br />
+      <label for="dept">Department:</label>
+      <input type="text" id="dept" name="dept" /><br /><br />
+      <label for="grade">Grade:</label>
+      <input type="number" step="0.01" id="grade" name="grade" /><br /><br />
+      <button type="submit"> Submit </button>
+    </form>
+
+    <br />
+    <br />
+
+    <a href="/get-students" style="margin-right: 40px;">
+      <button>View all students</button>
+    </a>
+
+    <a href="/edit-students">
+      <button>Edit student details</button>
+    </a>
+
+
+  </body>
+</html>
